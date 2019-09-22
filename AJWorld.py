@@ -13,7 +13,7 @@ cabin_shed = Place(name='Shed', description='A simple wood shed with a variety o
 
 cabin_bedroom2 = Place(name='Cabin Bedroom', description='The bedroom has a large bed and a table with a chair on it.  There is also a storage closet on the north wall of the room.', door_north=Door(description='A small closet door.', key_id='cabin_door', locked = True))
 
-cabin_closet = Place(name='Closet', description='A small closet with space for items.', things_here=[Key(name='key', description='A small metal key that has \'mine\' engraved in it.', key_id='mineshaft_entrance')])
+cabin_closet = Place(name='Closet', description='A small closet with space for items.', things_here=[Key(name='key', description='A small metal key that has \'mine\' engraved in it.', key_id='mineshaft_passage')])
 
 crossroads1=Place(name='Crossroads', description='A windy and secluded path with 4 directions to travel.')
 
@@ -21,7 +21,7 @@ dark_path=Place(name='Path', description='A normal path leading through a small 
 
 dark_entrance=Place(name='Deep Forest', description='A somewhat dark and spooky forest. A very dark and speeky forest lies ahead, and you can\'t shake the feeling that you shouldn\'t be here. Strange noises are coming from the dark forest, and the entrance to the dark forest is blocked by a wall of vines.')
 
-dark_forest1=Place(name='Dark Forest', description='In the dark forest, something seems wrong. You hear strange noises near you, but cannot identify the source. There are even some warning signs. You can hardly see, and you feel like you should\'t be here. Something or someone is shifting in the dark trees near you.', vinewall_east=Vinewall(description='A wall of vines blocking the entrance to the dark forest.', cut_id='vinewallcutter', cut=False), things_here=[Immovable(name='sign', description='Go back! Enter at your own risk!'), Immovable(name='warning', description='Warning! Beware of the witch!')])
+dark_forest1=Place(name='Dark Forest', description='In the dark forest, something seems wrong. You hear strange noises near you, but cannot identify the source. There are even some warning signs. You can hardly see, and you feel like you shouldn\'t be here. Something or someone is shifting in the dark trees near you.', vinewall_east=Vinewall(description='A wall of vines blocking the entrance to the dark forest.', cut_id='vinewallcutter', cut=False), things_here=[Immovable(name='sign', description='Go back! Enter at your own risk!'), Immovable(name='warning', description='Warning! Beware of the witch!')])
 
 witchhut_exterior=Place(name='Witch\'s Hut Exterior', description='In the middle of the dark forest is a witch\'s hut. It seems worn down, but the door is open. It sounds like something or someone is approching you from the forest.', things_here=[Immovable(name='sign', description='Do not enter! Trespassers will be punished!')])
 
@@ -29,7 +29,7 @@ witchhut_interior=Place(name='Witch\'s Hut Interior', description='Inside the hu
 
 dark_forest2=Place(name='Dark Forest Edge', description='At the edge of the spooky dark forest, you can hear a strange whirring, but you can\'t locate the source. Since there is nothing here, you really want to go back and away from the dark forest.')
 
-secret_passage1=Place(name='Dark Forest Clearing', description='You reach a light clearing to the dark forest. A trapdoor leads down and to the south.', door_south=Door(description='A trapdoor leading somewhere', key_id='mineshaft_passage', locked = True))
+secret_passage1=Place(name='Dark Forest Clearing', description='You reach a light clearing to the dark forest. A trapdoor leads down and to the south.', door_south=Door(description='A trapdoor leading somewhere.', key_id='mineshaft_passage', locked = True))
 
 mine_secret_dark_forest=Place('Mine Chamber', description='You are in a lit room with a trapdoor leading up and to the north.')
 

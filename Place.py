@@ -313,7 +313,7 @@ class Vinewall(Immovable):
             self.cut = True
             UI.println('The wall of vines has been cut open.')
         else:
-            UI.println('You don\'t have the proper tools to break through this thick wall of vines.')
+            UI.println('You don\'t have the right tool to break through this thick wall of vines.')
 
     def other_side(self, place):
         if place is None:
@@ -326,7 +326,9 @@ class Vinewall(Immovable):
             raise PassedWrongPlaceToDoorException()
 
     def on_go(self, player):
-        self.other_side(player.location).on_go(player)
-
+        if self.cut:
+            self.other_side(player.location).on_go(player)
+        else:
+            UI.println('The wall of vines is too thick to walk through. Try to find something to cut through the vines with.')
 class PassedWrongPlaceToDoorException(Exception):
     pass
