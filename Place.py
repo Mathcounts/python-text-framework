@@ -242,49 +242,6 @@ class Door(Immovable):
         else:
             self.closed = True 
             UI.println('The door is now closed.')
-<<<<<<< HEAD
-class Vinewall(Immovable):
-    def __init__(self, description, cut_id, cut=False, identifiers=None, name='Vinewall'):
-        super().__init__(name, description, identifiers)
-        self.cut_id = cut_id
-        self.description = description
-        self.name = name
-        self.origin = None
-        self.destination = None
-        self.cut = cut
 
-        self.interact['cut'] = self.on_cut
-        self.interact['break'] = self.on_cut
-        self.interact['destroy'] = self.on_cut
-        self.interact['slice'] = self.on_cut
-        self.interact['go'] = self.on_go
-
-    def on_cut(self, player):
-        if self.cut:
-            UI.println('The wall of vines is already cut.')
-        elif player.has_tool(self.cut_id):
-            self.cut = True
-            UI.println('The wall of vines has been cut open.')
-        else:
-            UI.println('You don\'t have the right tool to break through this thick wall of vines.')
-
-    def other_side(self, place):
-        if place is None:
-            raise PassedWrongPlaceToDoorException()
-        if place is self.origin:
-            return self.destination
-        elif place is self.destination:
-            return self.origin
-        else:
-            raise PassedWrongPlaceToDoorException()
-
-    def on_go(self, player):
-        if self.cut:
-            self.other_side(player.location).on_go(player)
-        else:
-            UI.println('The wall of vines is too thick to walk through. Try to find something to cut through the vines with.')
-=======
-
->>>>>>> robert/master
 class PassedWrongPlaceToDoorException(Exception):
     pass

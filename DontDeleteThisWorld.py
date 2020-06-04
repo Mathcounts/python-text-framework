@@ -9,7 +9,7 @@ cabin_exterior = Place(name='Cabin Exterior', description='The ground around the
 
 cabin_bedroom1 = Place(name='Cabin Bedroom', description='The bedroom has a large bed with a drawer beside it.  A candle-lit table is at the end of the room.')
       
-cabin_shed = Place(name='Shed', description='A simple wood shed with a variety of tools.', door_west=Door(description='A large, simple door to the shed.', key_id='cabin_door', locked=True), things_here=[Battery(name='battery', description='A small flashlight battery.', battery_id='flashlight'), Flashlight(name='flashlight', description='A small flashlight battery.', battery_id='flashlight'), Trimmer(name='trimmer', description='A metal trimmer for plants.', cut_id='vinewallcutter')])
+cabin_shed = Place(name='Shed', description='A simple wood shed with a variety of tools.', door_west=Door(description='A large, simple door to the shed.', key_id='cabin_door', locked=True), things_here=[Battery(name='battery', description='A small flashlight battery.', battery_id='flashlight'), Flashlight(name='flashlight', description='A small blue flashlight.', battery_id='flashlight'), Trimmer(name='trimmer', description='A metal trimmer for plants.', cut_id='vinewallcutter')])
 
 cabin_bedroom2 = Place(name='Cabin Bedroom', description='The bedroom has a large bed and a table with a chair on it.  There is also a storage closet on the north wall of the room.', door_north=Door(description='A small closet door.', key_id='cabin_door', locked = True))
 
@@ -19,9 +19,9 @@ crossroads1=Place(name='Crossroads', description='A windy and secluded path with
 
 dark_path=Place(name='Path', description='A normal path leading through a small forest. Something feels wrong with this path, but you can\'t seem to figure out what it is. The path gets darker and darker the deeper you go.')
 
-dark_entrance=Place(name='Deep Forest', description='A somewhat dark and spooky forest. A very dark and speeky forest lies ahead, and you can\'t shake the feeling that you shouldn\'t be here. Strange noises are coming from the dark forest, and the entrance to the dark forest is blocked by a wall of vines.')
+dark_entrance=Place(name='Deep Forest', description='A very dark and spooky forest lies ahead, and you can\'t shake the feeling that you shouldn\'t be here. Strange noises are coming from the dark forest, and the entrance to the dark forest is blocked by a wall of vines.')
 
-dark_forest1=Place(name='Dark Forest', description='In the dark forest, something seems wrong. You hear strange noises near you, but cannot identify the source. There are even some warning signs. You can hardly see, and you feel like you shouldn\'t be here. Something or someone is shifting in the dark trees near you.', vinewall_east=Vinewall(description='A wall of vines blocking the entrance to the dark forest.', cut_id='vinewallcutter', cut=False), things_here=[Immovable(name='sign', description='Go back! Enter at your own risk!'), Immovable(name='warning', description='Warning! Beware of the witch!')])
+dark_forest1=Place(name='Dark Forest', description='In the dark forest, something seems wrong. You hear strange noises near you, but cannot identify the source. There are even some warning signs. You can hardly see, and you feel like you shouldn\'t be here. Something or someone is shifting in the dark trees near you.')
 
 witchhut_exterior=Place(name='Witch\'s Hut Exterior', description='In the middle of the dark forest is a witch\'s hut. It seems worn down, but the door is open. It sounds like something or someone is approching you from the forest.', things_here=[Immovable(name='sign', description='Do not enter! Trespassers will be punished!')])
 
